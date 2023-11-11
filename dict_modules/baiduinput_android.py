@@ -4,6 +4,6 @@ def export(dict_list, proj, ver, title):
     fs.write('\ufeff')
     fs.write('[' + title + ']' + '\n')
     for line in dict_list:
-        fs.write(line[0] + '=0,' + line[1] + '\n')
+        fs.write(line[1] + '=0,' + line[0] + '\n')
     fs.close()
     
