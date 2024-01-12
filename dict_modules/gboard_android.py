@@ -5,7 +5,7 @@ def export(dict_list, proj, ver):
     fs = open('dictionary.txt', mode='w+', encoding='UTF-8')
     fs.write('# Gboard Dictionary version:1' + '\n')
     for line in dict_list:
-        fs.write(line[0] + '	' + line[1] + '	zh-CN	\n')
+        fs.write(line[1] + '	' + line[0] + '	zh-CN	\n')
     fs.close()
     archive = zipfile.ZipFile(
         'output/' + proj + '_GboardAndroid_' + ver + '.zip', 'w')
